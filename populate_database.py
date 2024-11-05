@@ -10,8 +10,6 @@ def main():
     parser.add_argument("--url", help="The URL to scrape (required if --scrape is used)")
     args = parser.parse_args()
 
-    print("Arguments:", args)
-    
     # Reset the database if needed
     if args.reset:
         print("✨ Clearing Database")

@@ -1,4 +1,3 @@
 /venv
-/data/pdfs
-/data/db
+/data
 __pycache__
