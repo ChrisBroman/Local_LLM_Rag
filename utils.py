@@ -88,7 +88,7 @@ def calculate_chunk_ids(chunks):
     return chunks
 
 def get_embedding_function():
-    embeddings = OllamaEmbeddings(model="nomic-embed-text")
+    embeddings = OllamaEmbeddings(model=EMBEDDING_MODEL)
     return embeddings
 
 def query_rag(query_text: str):
@@ -104,7 +104,7 @@ def query_rag(query_text: str):
     prompt = prompt_template.format(context=context_text, question=query_text)
     # print(prompt)
 
-    model = OllamaLLM(model="mistral")
+    model = OllamaLLM(model=LLM_MODEL)
     response_text = model.invoke(prompt)
 
     sources = [doc.metadata.get("id", None) for doc, _score in results]

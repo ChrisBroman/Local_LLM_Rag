@@ -7,6 +7,10 @@ PDF_DIR = os.path.join(DATA_DIR, "pdfs")
 TEXT_DIR = os.path.join(DATA_DIR, "texts")
 CHROMA_PATH = os.path.join(DATA_DIR, "chroma")
 
+# Models
+EMBEDDING_MODEL = "nomic-embed-text"
+LLM_MODEL = "mistral"
+
 # Prompt options
 PROMPT_TEMPLATE = """
 Answer the question based only on the following context:
